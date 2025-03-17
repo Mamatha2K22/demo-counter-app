@@ -6,5 +6,10 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/Mamatha2K22/demo-counter-app.git'
             }
         }
+        stage('UNIT Testing'){
+            steps{
+                sh 'mvn test'
+            }
+        }
     }
 }
